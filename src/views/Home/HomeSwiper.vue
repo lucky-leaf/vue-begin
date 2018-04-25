@@ -21,7 +21,7 @@ export default {
         loop: true
       },
       swiperList: [
-        { id: '0001', imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/e9/55d3c7bd96007b02.jpg_640x200_3916b37f.jpg' },
+        { id: '0001', imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/14/21f410d1016c8702.jpg_640x200_84d0effe.jpg' },
         { id: '0002', imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/fb/9140fd5178ae6b02.jpg_640x200_40ef818b.jpg' }
       ]
     }

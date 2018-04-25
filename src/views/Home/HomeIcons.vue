@@ -1,29 +1,105 @@
 <template>
   <div class="icons">
-    <div class="icon">
-      <div class="icon-img">
-        <img class="icon-img-content" src="http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png">
+    <swiper :option="swiperOption">
+      <swiper-slide v-for="(page, index) in pages" :key="index">
+      <div class="icon" v-for="item in page" :key="item.id">
+        <div class="icon-img">
+          <img class="icon-img-content" :src="item.imgUrl">
+        </div>
+        <p class="icon-desc">{{ item.desc }}</p>
       </div>
-      <p class="icon-desc">热门景点</p>
-    </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeIcons'
+  name: 'HomeIcons',
+  data () {
+    return {
+      swiperOptions: {
+      },
+      iconList: [
+        {
+          id: '0001',
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+          desc: '景点门票'
+        },
+        {
+          id: '0002',
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
+          desc: '名胜古迹'
+        },
+        {
+          id: '0003',
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
+          desc: '一日游'
+        },
+        {
+          id: '0004',
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/f5/a963333e1fa802.png',
+          desc: '本地玩乐'
+        },
+        {
+          id: '0005',
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
+          desc: '必游榜单'
+        },
+        {
+          id: '0006',
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png',
+          desc: '踏青赏花'
+        },
+        {
+          id: '0007',
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/67/9a1678221b8e0e02.png',
+          desc: '古镇'
+        },
+        {
+          id: '0008',
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png',
+          desc: '亲子游'
+        },
+        {
+          id: '0009',
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
+          desc: '淮安府署'
+        },
+        {
+          id: '0010',
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png',
+          desc: '全部玩乐'
+        }
+      ]
+    }
+  },
+  computed: {
+    pages () {
+      const pages = []
+      this.iconList.forEach((item, index) => {
+        const page = Math.floor(index / 8)
+        if (!pages[page]) {
+          pages[page] = []
+        }
+        pages[page].push(item)
+      })
+      return pages
+    }
+  }
 }
 </script>
 
 <style lang="less" scoped>
   @import '../../assets/css/variables.less';
+  @import '../../assets/css/mixins.less';
 
-  .icons {
-    overflow: hidden;
+  .icons /deep/ .swiper-container{
     height: 0;
     padding-bottom: 50%;
+  }
 
-    .icon {
+  .icon {
       position: relative;
       overflow: hidden;
       width: 25%;
@@ -56,7 +132,7 @@ export default {
         text-align: center;
         color: @font-color-dark;
         font-size: 0.24rem;
+        .ellipsis();
       }
     }
-  }
 </style>
