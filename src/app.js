@@ -1,9 +1,12 @@
 import Vue from 'vue'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 import App from './views/App'
 
-//  eslint-disable-next-line
-import normalizecss from 'normalize.css'
+import 'normalize.css'
+import 'swiper/dist/css/swiper.css'
 import './assets/css/iconfont.css'
+
+Vue.use(VueAwesomeSwiper)
 
 new Vue({
   el: '#app',
