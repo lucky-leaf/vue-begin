@@ -108,6 +108,7 @@ export default {
   }
 
   .icon {
+      margin-top: 0.1rem;
       position: relative;
       overflow: hidden;
       width: 25%;
