@@ -18,34 +18,15 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      weekendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/96/d7f41cb74a417d.jpg_r_640x214_a4403f98.jpg',
-          title: '扬州必游TOP10',
-          desc: '给你推荐，扬州十景'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/96/d7f41cb74a417d.jpg_r_640x214_a4403f98.jpg',
-          title: '扬州必游TOP10',
-          desc: '给你推荐，扬州十景'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/96/d7f41cb74a417d.jpg_r_640x214_a4403f98.jpg',
-          title: '扬州必游TOP10',
-          desc: '给你推荐，扬州十景'
-        }
-      ]
-    }
+  props: {
+    weekendList: Array
   }
 }
 </script>
 
 <style lang="less" scoped>
+  @import '../../assets/css/mixins.less';
+
   ul {
     list-style: none;
     margin: 0;

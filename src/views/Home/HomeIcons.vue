@@ -17,65 +17,16 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    iconList: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: {
           el: '.swiper-pagination'
         }
-      },
-      iconList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '景点门票'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-          desc: '名胜古迹'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-          desc: '一日游'
-        },
-        {
-          id: '0004',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/f5/a963333e1fa802.png',
-          desc: '本地玩乐'
-        },
-        {
-          id: '0005',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-          desc: '必游榜单'
-        },
-        {
-          id: '0006',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png',
-          desc: '踏青赏花'
-        },
-        {
-          id: '0007',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/67/9a1678221b8e0e02.png',
-          desc: '古镇'
-        },
-        {
-          id: '0008',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png',
-          desc: '亲子游'
-        },
-        {
-          id: '0009',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-          desc: '淮安府署'
-        },
-        {
-          id: '0010',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png',
-          desc: '全部玩乐'
-        }
-      ]
+      }
     }
   },
   computed: {

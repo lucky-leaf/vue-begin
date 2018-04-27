@@ -1,2 +1,5 @@
 # ignore node.js modules
 node_modules/
+
+# ignore mock
+static/mock

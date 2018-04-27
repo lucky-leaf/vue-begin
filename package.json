@@ -47,6 +47,7 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "normalize.css": "^8.0.0",
     "vue": "^2.5.16",
     "vue-awesome-swiper": "^3.1.3",

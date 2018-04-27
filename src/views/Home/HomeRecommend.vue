@@ -19,30 +19,9 @@
 
 <script>
 export default {
-  name: 'HomeRecomend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201310/16/cc9b4dee97ae58dbc8d65eac.jpg_200x200_f43e7d90.jpg',
-          title: '中国漕运博物馆',
-          desc: '这是一个博物馆,呀哈哈'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201310/16/cc9b4dee97ae58dbc8d65eac.jpg_200x200_f43e7d90.jpg',
-          title: '中国漕运博物馆',
-          desc: '这是一个博物馆,呀哈哈'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201310/16/cc9b4dee97ae58dbc8d65eac.jpg_200x200_f43e7d90.jpg',
-          title: '中国漕运博物馆',
-          desc: '这是一个博物馆,呀哈哈'
-        }
-      ]
-    }
+  name: 'HomeRecommend',
+  props: {
+    recommendList: Array
   }
 }
 </script>

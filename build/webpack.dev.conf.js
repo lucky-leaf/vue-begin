@@ -9,11 +9,17 @@ module.exports = merge(baseConfig, {
   devServer: {
     host: '0.0.0.0',
     port: '8080',
-    contentBase: path.join(__dirname, '../dist'),
+    contentBase: [path.join(__dirname, '../dist'), path.join(__dirname, '../static')],
     hot: true,
     overlay: {
       warnings: true,
       errors: true
+    },
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        pathRewrite: {'^/api': '/mock'}
+      }
     },
     historyApiFallback: true
   },
